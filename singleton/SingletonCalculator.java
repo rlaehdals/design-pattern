@@ -1,13 +1,10 @@
 public class SingletonCalculator {
 
-    public static SingletonCalculator calculator = null;
+    public static SingletonCalculator calculator = new SingletonCalculator();
 
     private SingletonCalculator() {}
 
-    public static synchronized SingletonCalculator getCalculator() {
-        if (calculator == null) {
-            calculator = new SingletonCalculator();
-        }
+    public static SingletonCalculator getCalculator() {
         return calculator;
     }
 
